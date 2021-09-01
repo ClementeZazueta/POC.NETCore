@@ -2,7 +2,7 @@
 Proof of concept of .NET Core and EF Core
 
 ### Recomendations
-*   Make sure to retore nuget packages.
+*   Make sure to restore nuget packages.
 *   In case of failure. re install all the next packages
 
 Install Nuget Packages| Projects that require this package|
