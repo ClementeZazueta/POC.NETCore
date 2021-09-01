@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Models.Models;
-using Services.Contracts;
+using POC_Models.Models;
+using POC_Services.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace POC.Controllers

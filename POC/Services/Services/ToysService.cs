@@ -1,15 +1,14 @@
-﻿using Data.Context;
+﻿using POC_Data.Context;
 using Microsoft.EntityFrameworkCore;
-using Models.Models;
-using POC.ViewModels;
-using Services.Contracts;
+using POC_Models.Models;
+using POC_Models.ViewModels;
+using POC_Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Services
+namespace POC_Services.Services
 {
     public class ToysService : IToysService
     {

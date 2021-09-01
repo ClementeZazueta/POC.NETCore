@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj" />
-    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\Data\POC_Data.csproj" />
+    <ProjectReference Include="..\Models\POC_Models.csproj" />
   </ItemGroup>
 
 </Project>

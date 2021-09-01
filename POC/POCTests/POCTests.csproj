@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\Models\POC_Models.csproj" />
     <ProjectReference Include="..\POC\POC.csproj" />
   </ItemGroup>
 

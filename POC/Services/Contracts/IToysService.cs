@@ -1,12 +1,9 @@
-﻿using Models.Models;
-using POC.ViewModels;
-using System;
+﻿using POC_Models.Models;
+using POC_Models.ViewModels;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Contracts
+namespace POC_Services.Contracts
 {
     public interface IToysService
     {

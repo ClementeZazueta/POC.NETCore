@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC", "POC\POC.csproj", "{9D66D57E-D62F-4342-9612-C1C4DEFDD500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC", "POC\POC.csproj", "{9D66D57E-D62F-4342-9612-C1C4DEFDD500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{D392BC28-074D-4209-BECF-C173B5711493}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC_Data", "Data\POC_Data.csproj", "{D392BC28-074D-4209-BECF-C173B5711493}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{A97F9E4E-5190-4E88-A94E-0BD494D166E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC_Models", "Models\POC_Models.csproj", "{A97F9E4E-5190-4E88-A94E-0BD494D166E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{7CBE7EBC-014A-4BFE-8347-A43A210DA199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC_Services", "Services\POC_Services.csproj", "{7CBE7EBC-014A-4BFE-8347-A43A210DA199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POCTests", "POCTests\POCTests.csproj", "{24C6D590-75CC-4C2E-A187-5EBA6AAC0C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POCTests", "POCTests\POCTests.csproj", "{24C6D590-75CC-4C2E-A187-5EBA6AAC0C68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

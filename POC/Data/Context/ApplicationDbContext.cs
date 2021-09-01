@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Data;
-using Models.Models;
-using Data.Config;
+using POC_Models.Models;
+using POC_Data.Config;
 
-namespace Data.Context
+namespace POC_Data.Context
 {
     public class ApplicationDbContext : DbContext
     {

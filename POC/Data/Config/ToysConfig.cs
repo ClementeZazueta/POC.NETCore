@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Models.Models;
+using POC_Models.Models;
 
-namespace Data.Config
+namespace POC_Data.Config
 {
     public class ToysConfig : IEntityTypeConfiguration<Toys>
     {

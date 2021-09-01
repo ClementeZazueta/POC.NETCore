@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace POC.ViewModels
+namespace POC_Models.ViewModels
 {
     public class ToysViewModel
     {
