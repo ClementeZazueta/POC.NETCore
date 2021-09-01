@@ -18,13 +18,13 @@ namespace POC_Services.Services
             _context = context;
         }
 
-        public async Task CreateToy(Toys toy)
+        public async Task CreateToyAsync(Toys toy)
         {
             _context.Toys.Add(toy);
            await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> DeleteToy(int id)
+        public async Task<bool> DeleteToyAsync(int id)
         {
             var toy = await _context.Toys.FirstOrDefaultAsync(t => t.Id == id);
 
@@ -39,7 +39,7 @@ namespace POC_Services.Services
             return false;
         }
 
-        public async Task<IList<ToysViewModel>> GetToysAsync()
+        public async Task<IEnumerable<ToysViewModel>> GetToysAsync()
         {
             var toys = await _context.Toys.Select(t => new ToysViewModel
             {
@@ -53,7 +53,7 @@ namespace POC_Services.Services
             return toys;
         }
 
-        public async Task<bool> UpdateToy(Toys toy)
+        public async Task<bool> UpdateToyAsync(Toys toy)
         {
             var getToy = await _context.Toys.FirstOrDefaultAsync(t => t.Id == toy.Id);
 

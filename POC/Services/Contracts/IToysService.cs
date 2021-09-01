@@ -7,9 +7,9 @@ namespace POC_Services.Contracts
 {
     public interface IToysService
     {
-        Task<IList<ToysViewModel>> GetToysAsync();
-        Task CreateToy(Toys toy);
-        Task<bool> UpdateToy(Toys toy);
-        Task<bool> DeleteToy(int id);
+        Task<IEnumerable<ToysViewModel>> GetToysAsync();
+        Task CreateToyAsync(Toys toy);
+        Task<bool> UpdateToyAsync(Toys toy);
+        Task<bool> DeleteToyAsync(int id);
     }
 }

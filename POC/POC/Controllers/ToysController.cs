@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using POC_Models.Models;
+using POC_Models.ViewModels;
 using POC_Services.Contracts;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace POC.Controllers
@@ -19,14 +21,14 @@ namespace POC.Controllers
         [HttpGet("ToysList")]
         public async Task<IActionResult> Toys()
         {
-            try
+            var result = await _toysService.GetToysAsync();
+
+            if (result is null)
             {
-                return Ok(await _toysService.GetToysAsync());
+                return NotFound();
             }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
+
+            return Ok(result); 
         }
 
         [HttpPost("Save")]
@@ -39,7 +41,7 @@ namespace POC.Controllers
 
             try
             {
-                await _toysService.CreateToy(toy);
+                await _toysService.CreateToyAsync(toy);
                 return Ok("Toy saved succesfully");
             }
             catch (Exception e)
@@ -58,7 +60,7 @@ namespace POC.Controllers
 
             try
             {
-                var res = await _toysService.DeleteToy(id);
+                var res = await _toysService.DeleteToyAsync(id);
 
                 if (res)
                 {
@@ -88,7 +90,7 @@ namespace POC.Controllers
 
             try
             {
-                var res = await _toysService.UpdateToy(toy);
+                var res = await _toysService.UpdateToyAsync(toy);
 
                 if (res)
                 {
