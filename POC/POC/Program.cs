@@ -13,6 +13,7 @@ namespace POC
     {
         public static void Main(string[] args)
         {
+            //TODO: Create code to run migrations in an automated way
             CreateHostBuilder(args).Build().Run();
         }
 

@@ -51,6 +51,7 @@ namespace POC.Controllers
         [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
+            //TODO:We can move this into the else of the res variable instead
             if (id == 0)
             {
                 return NotFound();
@@ -64,12 +65,14 @@ namespace POC.Controllers
                 {
                     return Ok("Toy deleted successfully");
                 }
-
+                //TODO:If the result was not succeded this should be a not found as well, Bad request should be something wrong in the coming data
+                //This migh be an 
                 return BadRequest();
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                //TODO: I changed the bad request to an internal server error here
+                return StatusCode(500,e.Message);
             }
         }
 
