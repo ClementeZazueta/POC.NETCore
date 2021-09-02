@@ -41,14 +41,16 @@ namespace POC_Services.Services
 
         public async Task<IEnumerable<ToysViewModel>> GetToysAsync()
         {
-            var toys = await _context.Toys.Select(t => new ToysViewModel
-            {
-                Id = t.Id,
-                Name = t.Name,
-                Age = t.AgeRestriction,
-                Price = Math.Round(t.Price, 2),
-                Company = t.Company
-            }).ToListAsync();
+            var toys = await _context.Toys
+                .Include(c => c.Company)
+                .Select(t => new ToysViewModel
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    Age = t.AgeRestriction,
+                    Price = Math.Round(t.Price, 2),
+                    Company = t.Company.Name
+                }).ToListAsync();
 
             return toys;
         }
@@ -63,8 +65,8 @@ namespace POC_Services.Services
                 getToy.Description= toy.Description;
                 getToy.AgeRestriction = toy.AgeRestriction;
                 getToy.Price = toy.Price;
-                getToy.Company = toy.Company;
-                getToy.ProductImage = toy.ProductImage;
+                getToy.CompanyId = toy.CompanyId;
+                getToy.ProductImageId = toy.ProductImageId;
 
                 _context.Toys.Attach(getToy);
                 await _context.SaveChangesAsync();

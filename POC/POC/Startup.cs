@@ -11,7 +11,7 @@ using POC_Services.Services;
 
 namespace POC
 {
-    public class Startup
+    public partial class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -35,7 +35,7 @@ namespace POC
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //TODO: as a best practice add a partial class with a method named ConfigureDI() in which we are going to add all the services.AddSomething
-            services.AddScoped<IToysService, ToysService>();
+            ConfigureDI(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

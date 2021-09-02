@@ -106,7 +106,7 @@ namespace POCTests
                 Id = rand.Next(100),
                 Name = Guid.NewGuid().ToString(),
                 Age = rand.Next(10),
-                Company = Guid.NewGuid().ToString(),
+                CompanyName = It.IsAny<string>(),
                 Price = Convert.ToDecimal(rand.NextDouble())
             };
         }
@@ -119,9 +119,9 @@ namespace POCTests
                 Name = Guid.NewGuid().ToString(),
                 AgeRestriction = rand.Next(10),
                 Description = Guid.NewGuid().ToString(),
-                Company = Guid.NewGuid().ToString(),
+                CompanyId = It.IsAny<int>(),
                 Price = Convert.ToDecimal(rand.NextDouble()),
-                ProductImage = Guid.NewGuid().ToString()
+                ProductImageId = It.IsAny<int>()
             };
         }
 
@@ -132,7 +132,7 @@ namespace POCTests
                 Name = Guid.NewGuid().ToString(),
                 Description = Guid.NewGuid().ToString(),
                 AgeRestriction = rand.Next(10),
-                Company = Guid.NewGuid().ToString(),
+                CompanyId = It.IsAny<int>(),
                 Price = Convert.ToDecimal(rand.NextDouble())
             };
         }

@@ -12,8 +12,11 @@ namespace POC_Models.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public int AgeRestriction { get; set; }
-        public string Company { get; set; }
+        public int CompanyId { get; set; }
         public decimal Price { get; set; }
-        public string ProductImage { get; set; }
+        public int ProductImageId { get; set; }
+
+        public virtual Company Company { get; set; }
+        public virtual ProductImage ProductImage { get; set; }
     }
 }

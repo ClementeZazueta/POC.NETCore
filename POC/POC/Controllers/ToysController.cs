@@ -44,7 +44,7 @@ namespace POC.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                return StatusCode(500, e.Message);
             }
         }
 
@@ -52,11 +52,6 @@ namespace POC.Controllers
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             //TODO:We can move this into the else of the res variable instead
-            if (id == 0)
-            {
-                return NotFound();
-            }
-
             try
             {
                 var res = await _toysService.DeleteToyAsync(id);
@@ -67,7 +62,7 @@ namespace POC.Controllers
                 }
                 //TODO:If the result was not succeded this should be a not found as well, Bad request should be something wrong in the coming data
                 //This migh be an 
-                return BadRequest();
+                return NotFound();
             }
             catch (Exception e)
             {
@@ -84,11 +79,6 @@ namespace POC.Controllers
                 return BadRequest();
             }
 
-            if (toy.Id == 0)
-            {
-                return NotFound();
-            }
-
             try
             {
                 var res = await _toysService.UpdateToyAsync(toy);
@@ -98,11 +88,11 @@ namespace POC.Controllers
                     return Ok("Toy updated successfully");
                 }
 
-                return BadRequest();
+                return NotFound();
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                return StatusCode(500, e.Message);
             }
         }
     }
