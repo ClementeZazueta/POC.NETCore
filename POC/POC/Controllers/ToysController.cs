@@ -17,7 +17,7 @@ namespace POC.Controllers
         }
 
         [HttpGet("ToysList")]
-        public async Task<IActionResult> Toys()
+        public async Task<ActionResult> Toys()
         {
             var result = await _toysService.GetToysAsync();
 
