@@ -52,6 +52,7 @@ namespace POC.Controllers
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             //TODO:We can move this into the else of the res variable instead
+            //Already moved
             try
             {
                 var res = await _toysService.DeleteToyAsync(id);
