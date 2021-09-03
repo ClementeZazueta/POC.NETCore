@@ -106,7 +106,7 @@ namespace POCTests
                 Id = rand.Next(100),
                 Name = Guid.NewGuid().ToString(),
                 Age = rand.Next(10),
-                CompanyName = It.IsAny<string>(),
+                Company = It.IsAny<string>(),
                 Price = Convert.ToDecimal(rand.NextDouble())
             };
         }
